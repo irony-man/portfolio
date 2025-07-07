@@ -2,8 +2,7 @@
     --bg-color: #1a1a2e;
     --primary-text: #e0e0ff;
     --secondary-text: #a0a0c0;
-    --accent-color: #ed64a6;
-    --accent-color-2: #9f7aea;
+    --accent-color: #3BE9DE;
     --card-bg-color: #2d2d4d;
     --border-color: #4a4a6a;
     --nav-bg-color: rgba(26, 26, 46, 0.9);
@@ -370,7 +369,7 @@ body {
     z-index: 2;
 }
 .contact-form button:hover {
-    background-color: #d53f8c;
+    background-color: #00c5cd;
 }
 
 footer {
