@@ -1,5 +1,5 @@
 import { Montserrat, Roboto } from "next/font/google";
-import "./globals.css";
+import "@/styles/globals.css";
 
 const montserrat = Montserrat({
   weigth: ["700", "900"],
