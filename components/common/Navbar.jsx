@@ -5,6 +5,9 @@ const Navbar = () => (
             ShivamRai_
         </a>
         <div className="nav-links">
+            <a href="#about">
+                <span>//</span> About
+            </a>
             <a href="#work">
                 <span>//</span> Work
             </a>

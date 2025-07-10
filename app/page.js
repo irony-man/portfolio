@@ -16,6 +16,8 @@ import SkillsCard from "@/components/common/SkillsCard";
 import ContactForm from "@/components/common/ContactForm";
 import AboutCard from "@/components/common/AboutCard";
 import UserIcon from "@/icons/UserIcon";
+import ActivityCard from "@/components/common/ActivityCard";
+import ActivityIcon from "@/icons/ActivityIcon";
 
 // --- Data ---
 const experienceData = [
@@ -133,6 +135,13 @@ export default function App() {
                                 icon={<LayersIcon />}
                             >
                                 <SkillsCard skills={skillsData} />
+                            </Section>
+                            <Section
+                                id="activity"
+                                title="Activities"
+                                icon={<ActivityIcon />}
+                            >
+                                <ActivityCard />
                             </Section>
                             <Section
                                 id="contact"
