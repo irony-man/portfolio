@@ -14,7 +14,8 @@ import Timeline from "@/components/common/Timeline";
 import ProjectCard from "@/components/common/ProjectCard";
 import SkillsCard from "@/components/common/SkillsCard";
 import ContactForm from "@/components/common/ContactForm";
-
+import AboutCard from "@/components/common/AboutCard";
+import UserIcon from "@/icons/UserIcon";
 
 // --- Data ---
 const experienceData = [
@@ -103,6 +104,13 @@ export default function App() {
                     <Hero />
                     <div className="content-wrapper">
                         <div className="container">
+                            <Section
+                                id="about"
+                                title="About Me"
+                                icon={<UserIcon />}
+                            >
+                                <AboutCard />
+                            </Section>
                             <Section
                                 id="work"
                                 title="Experience"
