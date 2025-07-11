@@ -1,22 +1,24 @@
 import React from "react";
 import Card from "@/components/common/Card";
 
-const ActivityCard = () => {
+const ActivityCard = ({ activity }) => {
     return (
         <Card>
             <div className="activity-item">
-                <h4>Github</h4>
-                <img
-                    src="https://ghchart.rshah.org/irony-man"
-                    alt="GitHub Contribution Graph"
-                ></img>
-            </div>
-            <div className="activity-item">
-                <h4>Leetcode</h4>
-                <img
-                    src="https://leetcard.jacoblin.cool/shivamrai0401?theme=catppuccinMocha&font=Roboto&ext=heatmap"
-                    alt="Leetcode Contribution Graph"
-                ></img>
+                <a
+                    href={activity.profileLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <h4>
+                        {activity.icon}
+                        <span>{activity.title}</span>
+                    </h4>
+                    <img
+                        src={activity.image}
+                        alt={`${activity.title} Contribution Graph`}
+                    ></img>
+                </a>
             </div>
         </Card>
     );

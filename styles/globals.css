@@ -326,12 +326,17 @@ li::before {
     font-family: "Montserrat", sans-serif;
 }
 
-.activity-item {
-    margin-bottom: 1.5rem;
+.activity-item h4 {
+    padding: 0 0 1.5rem 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    letter-spacing: 1px;
 }
 
-.activity-item h4 {
-    margin: 0 0 1.5rem 0;
+.activity-item a {
+    text-decoration: none;
 }
 
 .activity-item img {

@@ -18,6 +18,8 @@ import AboutCard from "@/components/common/AboutCard";
 import UserIcon from "@/icons/UserIcon";
 import ActivityCard from "@/components/common/ActivityCard";
 import ActivityIcon from "@/icons/ActivityIcon";
+import GitHubIcon from "@/icons/GithubIcon";
+import LeetCodeIcon from "@/icons/LeetcodeIcon";
 
 // --- Data ---
 const experienceData = [
@@ -95,6 +97,21 @@ const skillsData = {
     ],
 };
 
+const activityData = [
+    {
+        title: "Github",
+        image: "https://ghchart.rshah.org/irony-man",
+        profileLink: "https://github.com/irony-man",
+        icon: <GitHubIcon />,
+    },
+    {
+        title: "Leetcode",
+        image: "https://leetcard.jacoblin.cool/shivamrai0401?theme=catppuccinMocha&font=Roboto&ext=heatmap",
+        profileLink: "https://leetcode.com/u/shivamrai0401",
+        icon: <LeetCodeIcon />,
+    },
+];
+
 // --- Main App Component ---
 export default function App() {
     return (
@@ -141,7 +158,9 @@ export default function App() {
                                 title="Activities"
                                 icon={<ActivityIcon />}
                             >
-                                <ActivityCard />
+                                {activityData.map((activity, i) => (
+                                    <ActivityCard key={i} activity={activity} />
+                                ))}
                             </Section>
                             <Section
                                 id="contact"
