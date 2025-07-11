@@ -1,13 +1,11 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import BriefcaseIcon from "@/icons/BriefcaseIcon";
 import CodeIcon from "@/icons/CodeIcon";
 import MailIcon from "@/icons/MailIcon";
 import LayersIcon from "@/icons/LayersIcon";
-import DownloadIcon from "@/icons/DownloadIcon";
 import BackgroundCanvas from "@/components/3d/BackgroundCanvas";
 import Navbar from "@/components/common/Navbar";
-import Card from "@/components/common/Card";
 import Hero from "@/components/common/Hero";
 import Section from "@/components/common/Section";
 import Timeline from "@/components/common/Timeline";
@@ -114,6 +112,26 @@ const activityData = [
 
 // --- Main App Component ---
 export default function App() {
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("is-visible");
+                    }
+                });
+            },
+            {
+                threshold: 0.1,
+            }
+        );
+
+        const sections = document.querySelectorAll(".section");
+        sections.forEach((section) => observer.observe(section));
+
+        return () => sections.forEach((section) => observer.unobserve(section));
+    }, []);
+
     return (
         <>
             <div className="portfolio-wrapper">

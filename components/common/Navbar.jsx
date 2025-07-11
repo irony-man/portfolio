@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import MenuIcon from "@/icons/MenuIcon";
 import CloseIcon from "@/icons/CloseIcon";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
+
+    useEffect(() => {
+        document.body.style.overflow = isOpen ? "hidden" : "auto";
+    }, [isOpen]);
 
     return (
         <nav className="main-nav">
@@ -48,6 +52,9 @@ const Navbar = () => {
                     </a>
                     <a href="#skills" onClick={() => setIsOpen(false)}>
                         <span>//</span> Skills
+                    </a>
+                    <a href="#activity" onClick={() => setIsOpen(false)}>
+                        <span>//</span> Activities
                     </a>
                     <a href="#contact" onClick={() => setIsOpen(false)}>
                         <span>//</span> Contact
