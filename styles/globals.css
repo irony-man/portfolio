@@ -46,6 +46,11 @@ body {
     border-bottom: 1px solid var(--border-color);
 }
 
+.main-nav a span {
+    color: var(--accent-color);
+    margin-right: 0.5rem;
+}
+
 .nav-brand {
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
@@ -54,11 +59,11 @@ body {
     letter-spacing: 1px;
 }
 
-.nav-links {
+.nav-links-desktop {
     display: flex;
     gap: 2rem;
 }
-.nav-links a {
+.nav-links-desktop a {
     color: var(--secondary-text);
     text-decoration: none;
     transition: color 0.3s ease;
@@ -66,13 +71,44 @@ body {
     font-weight: 500;
 }
 
-.nav-links a:hover {
+.nav-links-desktop a:hover {
     color: var(--accent-color);
 }
 
-.nav-links a span {
-    color: var(--accent-color);
-    margin-right: 0.5rem;
+.nav-mobile-toggle {
+    display: none;
+}
+
+.nav-mobile-toggle button {
+    background: none;
+    border: none;
+    color: var(--primary-text);
+    cursor: pointer;
+}
+
+.nav-mobile-menu {
+    position: absolute;
+    height: 100vh;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--nav-bg-color);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    gap: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    display: none;
+}
+
+.nav-mobile-menu a {
+    color: var(--primary-text);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 
 .hero {
@@ -415,6 +451,15 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+    .nav-links-desktop {
+        display: none;
+    }
+    .nav-mobile-toggle {
+        display: block;
+    }
+    .nav-mobile-menu {
+        display: flex;
+    }
     .card {
         padding: 0.5rem;
     }
