@@ -1,4 +1,5 @@
 import { Montserrat, Roboto } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next"
 import "@/styles/globals.css";
 
 const montserrat = Montserrat({
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
         className={`${montserrat.variable} ${roboto.variable} antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
