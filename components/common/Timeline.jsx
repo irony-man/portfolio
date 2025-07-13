@@ -1,9 +1,12 @@
 import React from "react";
 import Card from "@/components/common/Card";
+import SkillItems from "@/components/common/SkillItems";
+import GitHubIcon from "@/icons/GithubIcon";
+import WebIcon from "@/icons/WebIcon";
 
-const Timeline = ({ experiences }) => (
+const Timeline = ({ works }) => (
     <div className="timeline">
-        {experiences.map((item, index) => (
+        {works.map((item, index) => (
             <div
                 key={index}
                 className={`timeline-item ${
@@ -11,7 +14,27 @@ const Timeline = ({ experiences }) => (
                 }`}
             >
                 <Card>
-                    <h3>{item.role}</h3>
+                    <h3>
+                        {item.role}
+                        {item.links?.github && (
+                            <a
+                                href={item.links.github}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <GitHubIcon />
+                            </a>
+                        )}
+                        {item.links?.github && (
+                            <a
+                                href={item.links.live}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <WebIcon />
+                            </a>
+                        )}
+                    </h3>
                     <p className="company">
                         {item.company} ({item.date})
                     </p>
@@ -24,11 +47,7 @@ const Timeline = ({ experiences }) => (
                         className="skills-list"
                         style={{ marginTop: "1.5rem" }}
                     >
-                        {item.skills.map((skill) => (
-                            <span key={skill} className="skill-item">
-                                {skill}
-                            </span>
-                        ))}
+                        <SkillItems skills={item.skills} />
                     </div>
                 </Card>
             </div>

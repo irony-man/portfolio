@@ -19,6 +19,10 @@ body {
     background-color: var(--bg-color);
 }
 
+a {
+    text-decoration: none;
+}
+
 .three-canvas {
     position: fixed;
     top: 0;
@@ -55,7 +59,6 @@ body {
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
     color: var(--primary-text);
-    text-decoration: none;
     letter-spacing: 1px;
 }
 
@@ -65,7 +68,6 @@ body {
 }
 .nav-links-desktop a {
     color: var(--secondary-text);
-    text-decoration: none;
     transition: color 0.3s ease;
     font-size: 0.9rem;
     font-weight: 500;
@@ -105,7 +107,6 @@ body {
 
 .nav-mobile-menu a {
     color: var(--primary-text);
-    text-decoration: none;
     font-size: 1.2rem;
     font-weight: 500;
     animation: fadeInUp 1s ease-out forwards;
@@ -237,12 +238,12 @@ body {
 .section {
     padding: 6rem 0 0 0;
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateX(-40px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 .section.is-visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
 }
 
 .section-title {
@@ -253,7 +254,7 @@ body {
     color: var(--secondary-text);
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-bottom: 2rem;
+    margin: 0 0 2rem 0;
     font-weight: 500;
 }
 .section-title svg {
@@ -312,11 +313,21 @@ body {
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     margin: 0 0 0.5rem 0;
     color: var(--primary-text);
     font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
 }
+
+h3 svg {
+    color: var(--accent-color);
+}
+
 .company {
     color: var(--accent-color);
     font-weight: 500;
@@ -393,6 +404,9 @@ li::before {
 .project-heading {
     margin-bottom: 1.5rem;
 }
+.project-skills {
+    margin-top: 1.5rem;
+}
 
 .skills-grid {
     display: grid;
@@ -403,7 +417,7 @@ li::before {
 .activity-item h4 {
     color: var(--accent-color);
     font-size: 1.1rem;
-    margin-bottom: 1rem;
+    margin-top: 0;
     font-family: "Montserrat", sans-serif;
 }
 
@@ -414,10 +428,6 @@ li::before {
     align-items: center;
     gap: 1rem;
     letter-spacing: 1px;
-}
-
-.activity-item a {
-    text-decoration: none;
 }
 
 .activity-item img {
@@ -473,7 +483,6 @@ li::before {
     font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
-    text-decoration: none;
     transition: background-color 0.3s ease;
 }
 .button:hover {
@@ -506,6 +515,9 @@ footer {
     }
     .card {
         padding: 0.5rem;
+    }
+    .card-content {
+        padding: 1rem;
     }
     .timeline::after {
         display: none;

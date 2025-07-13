@@ -20,17 +20,21 @@ import GitHubIcon from "@/icons/GithubIcon";
 import LeetCodeIcon from "@/icons/LeetcodeIcon";
 
 // --- Data ---
-const experienceData = [
+const workData = [
     {
-        role: "Freelance Developer",
+        role: "Software Developer",
         company: "Waiter: Contactless Dining",
-        date: "Q2 2023",
+        date: "Oct 2024 - Present",
         description: [
             "Built a QR-code-based dining platform with real-time updates using Vue.js, Django, and WebSockets.",
             "Implemented a machine learning-based dish recommendation system.",
             "Deployed the application on AWS and used Docker for containerization.",
         ],
         skills: ["Vue.js", "Django", "WebSockets", "AWS", "Docker"],
+        links: {
+            github: "https://github.com/irony-man/waiter",
+            live: "https://waiterrr.onrender.com/",
+        },
     },
     {
         role: "Software Developer",
@@ -68,6 +72,11 @@ const projectsData = [
             "Developed a responsive web application for seamless buying and selling of designs using React, Node.js, and Django.",
             "Redesigned the backend, optimizing database queries and reducing response times by 50%.",
         ],
+        skills: ["React", "Redux", "Node.js", "MongoDB", "Django", "AWS S3"],
+        links: {
+            github: "https://github.com/irony-man/orderrr",
+            live: "https://orderrr-v2.onrender.com/",
+        },
     },
 ];
 
@@ -150,10 +159,10 @@ export default function App() {
                             </Section>
                             <Section
                                 id="work"
-                                title="Experience"
+                                title="Work"
                                 icon={<BriefcaseIcon />}
                             >
-                                <Timeline experiences={experienceData} />
+                                <Timeline works={workData} />
                             </Section>
                             <Section
                                 id="projects"
