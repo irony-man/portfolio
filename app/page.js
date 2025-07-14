@@ -18,6 +18,7 @@ import ActivityCard from "@/components/common/ActivityCard";
 import ActivityIcon from "@/icons/ActivityIcon";
 import GitHubIcon from "@/icons/GithubIcon";
 import LeetCodeIcon from "@/icons/LeetcodeIcon";
+import Footer from "@/components/common/Footer";
 
 // --- Data ---
 const workData = [
@@ -97,7 +98,7 @@ const projectsData = [
         ],
         "skills": ["React", "Next.js", "Tailwind CSS", "Nodemailer", "Vercel"],
         links: {
-            github: "https://github.com/irony-man/first-step-play-school",
+            github: "https://github.com/irony-man/first-step",
             live: "https://first-step-play-school.vercel.app/",
         },
     }
@@ -219,9 +220,7 @@ export default function App() {
                             >
                                 <ContactForm />
                             </Section>
-                            <footer>
-                                <p>&copy; 2025 Shivam Rai</p>
-                            </footer>
+                            <Footer />
                         </div>
                     </div>
                 </main>
