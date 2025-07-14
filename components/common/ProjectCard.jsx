@@ -17,7 +17,7 @@ const ProjectCard = ({ project }) => (
                     <GitHubIcon />
                 </a>
             )}
-            {project.links?.github && (
+            {project.links?.live && (
                 <a
                     href={project.links.live}
                     target="_blank"

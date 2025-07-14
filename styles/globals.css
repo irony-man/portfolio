@@ -321,11 +321,13 @@ h3 {
     line-height: 1.5;
     display: flex;
     gap: 1.5rem;
+    align-items: center;
     flex-wrap: wrap;
 }
 
 h3 svg {
     color: var(--accent-color);
+    padding-top: 6px;
 }
 
 .company {

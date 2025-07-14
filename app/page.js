@@ -78,6 +78,29 @@ const projectsData = [
             live: "https://orderrr-v2.onrender.com/",
         },
     },
+    {
+        title: "Interactive 3D Portfolio",
+        description: [
+            "A personal portfolio website built with Next.js and Three.js, featuring a dynamic 3D background and a clean, responsive UI.",
+            "Designed to be fully component-based for maintainability and scalability.",
+        ],
+        skills: ["React", "Next.js", "Three.js", "Vercel"],
+        links: {
+            github: "https://github.com/irony-man/portfolio",
+        },
+    },
+    {
+        "title": "First Step Play School Website",
+        "description": [
+            "A fully responsive website for a play school, built with Next.js and Tailwind CSS.",
+            "Features include program listings, a gallery, an about page, and contact and application forms with email functionality."
+        ],
+        "skills": ["React", "Next.js", "Tailwind CSS", "Nodemailer", "Vercel"],
+        links: {
+            github: "https://github.com/irony-man/first-step-play-school",
+            live: "https://first-step-play-school.vercel.app/",
+        },
+    }
 ];
 
 const skillsData = {

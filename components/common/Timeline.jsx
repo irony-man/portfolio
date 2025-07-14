@@ -25,7 +25,7 @@ const Timeline = ({ works }) => (
                                 <GitHubIcon />
                             </a>
                         )}
-                        {item.links?.github && (
+                        {item.links?.live && (
                             <a
                                 href={item.links.live}
                                 target="_blank"
