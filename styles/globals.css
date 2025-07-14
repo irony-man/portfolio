@@ -55,6 +55,13 @@ a {
     margin-right: 0.5rem;
 }
 
+.main-nav.open {
+    background-color: var(--bg-color);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    border-bottom: 0px;
+}
+
 .nav-brand {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;

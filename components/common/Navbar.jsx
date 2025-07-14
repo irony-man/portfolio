@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from "react";
 import MenuIcon from "@/icons/MenuIcon";
 import CloseIcon from "@/icons/CloseIcon";
+import Footer from "./Footer";
 
 const Navbar = () => {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(true);
 
     useEffect(() => {
         document.body.style.overflow = isOpen ? "hidden" : "auto";
     }, [isOpen]);
 
     return (
-        <nav className="main-nav">
+        <nav className={`main-nav ${isOpen ? "open" : ""}`}>
             <a href="#" className="nav-brand">
                 ShivamRai_
             </a>
@@ -59,6 +60,9 @@ const Navbar = () => {
                     <a href="#contact" onClick={() => setIsOpen(false)}>
                         <span>//</span> Contact
                     </a>
+                    <div style={{marginTop: '16rem'}}>
+                        <Footer />
+                    </div>
                 </div>
             )}
         </nav>
