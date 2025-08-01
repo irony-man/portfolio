@@ -6,7 +6,7 @@ const CornerGraphic = ({ position }) => {
         "top-left": "top-2 left-2 border-t-2 border-l-2",
         "top-right": "top-2 right-2 border-t-2 border-r-2",
         "bottom-left": "bottom-2 left-2 border-b-2 border-l-2",
-        "bottom-right": "bottom-2 right-2 border-b-2 border-r-2",
+        "bottom-right": "bottom-2 right-2 border-b-2 border-r-2"
     };
     return (
         <div className={`${baseClasses} ${positionClasses[position]}`}></div>
@@ -23,6 +23,5 @@ const Card = ({ children }) => (
         <CornerGraphic position="bottom-right" />
     </div>
 );
-
 
 export default Card;

@@ -1,29 +1,33 @@
 {
-  "name": "portfolio",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@react-three/drei": "^10.4.4",
-    "@react-three/fiber": "^9.2.0",
-    "@tailwindcss/vite": "^4.1.11",
-    "@vercel/analytics": "^1.5.0",
-    "next": "^15.3.5",
-    "nodemailer": "^7.0.5",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "three": "^0.178.0"
-  },
-  "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4",
-    "eslint": "^9",
-    "eslint-config-next": "15.3.5",
-    "tailwindcss": "^4.1.11"
-  }
+    "name": "portfolio",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev --turbopack",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "format": "prettier --check './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+        "format:fix": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
+    },
+    "dependencies": {
+        "@react-three/drei": "^10.4.4",
+        "@react-three/fiber": "^9.2.0",
+        "@tailwindcss/vite": "^4.1.11",
+        "eslint-config-prettier": "^10.1.5",
+        "eslint-plugin-prettier": "^5.5.1",
+        "@vercel/analytics": "^1.5.0",
+        "next": "^15.3.5",
+        "nodemailer": "^7.0.5",
+        "react": "^19.1.0",
+        "react-dom": "^19.1.0",
+        "three": "^0.178.0"
+    },
+    "devDependencies": {
+        "@eslint/eslintrc": "^3",
+        "@tailwindcss/postcss": "^4",
+        "eslint": "^9",
+        "eslint-config-next": "15.3.5",
+        "tailwindcss": "^4.1.11"
+    }
 }
