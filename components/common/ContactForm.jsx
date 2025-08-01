@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import Card from '@/components/common/Card';
-import api from '@/lib/api';
+import React, { useState } from "react";
+import Card from "@/components/common/Card";
+import api from "@/lib/api";
 
 const ContactForm = () => {
     const initialForm = {
-        name: '',
-        email: '',
-        message: ''
+        name: "",
+        email: "",
+        message: ""
     };
     const initialAlert = {
         show: false,
-        message: '',
-        type: 'success'
+        message: "",
+        type: "success"
     };
     const [form, setForm] = useState(initialForm);
     const [isLoading, setIsLoading] = useState(false);
@@ -33,14 +33,14 @@ const ContactForm = () => {
             setForm(initialForm);
             setAlert({
                 show: true,
-                message: 'Your message has been sent successfully!',
-                type: 'success'
+                message: "Your message has been sent successfully!",
+                type: "success"
             });
         } catch (error) {
             setAlert({
                 show: true,
                 message: "Your message couldn't be submitted in moment!",
-                type: 'error'
+                type: "error"
             });
         } finally {
             setIsLoading(false);
@@ -80,12 +80,18 @@ const ContactForm = () => {
                     {isLoading ? (
                         <div className="spinner"></div>
                     ) : (
-                        'Send Message'
+                        "Send Message"
                     )}
                 </button>
             </form>
 
-            {alert.show && <div className={`form-alert ${alert.type == 'error'? 'error':''}`}>{alert.message}</div>}
+            {alert.show && (
+                <div
+                    className={`form-alert ${alert.type == "error" ? "error" : ""}`}
+                >
+                    {alert.message}
+                </div>
+            )}
         </Card>
     );
 };

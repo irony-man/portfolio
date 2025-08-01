@@ -11,6 +11,6 @@ const Shape = ({ ...props }) => {
         }
     });
     return <mesh ref={ref} {...props} />;
-}
+};
 
 export default Shape;

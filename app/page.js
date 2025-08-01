@@ -29,13 +29,13 @@ const workData = [
         description: [
             "Built a QR-code-based dining platform with real-time updates using Vue.js, Django, and WebSockets.",
             "Implemented a machine learning-based dish recommendation system.",
-            "Deployed the application on AWS and used Docker for containerization.",
+            "Deployed the application on AWS and used Docker for containerization."
         ],
         skills: ["Vue.js", "Django", "WebSockets", "AWS", "Docker"],
         links: {
             github: "https://github.com/irony-man/waiter",
-            live: "https://waiterrr.onrender.com/",
-        },
+            live: "https://waiterrr.onrender.com/"
+        }
     },
     {
         role: "Software Developer",
@@ -44,15 +44,9 @@ const workData = [
         description: [
             "Developed a high-performance inventory traceability application, improving supply chain accuracy by 25%.",
             "Automated data pipelines, reducing manual processing time by 50%.",
-            "Built CI/CD pipelines to streamline deployment, decreasing release time by 40%.",
+            "Built CI/CD pipelines to streamline deployment, decreasing release time by 40%."
         ],
-        skills: [
-            "Django",
-            "Vue.js",
-            "GoLang",
-            "FoundationDB",
-            "GitHub Actions",
-        ],
+        skills: ["Django", "Vue.js", "GoLang", "FoundationDB", "GitHub Actions"]
     },
     {
         role: "Software Developer Intern",
@@ -60,10 +54,10 @@ const workData = [
         date: "Nov 2022 - Jun 2023",
         description: [
             "Built a real-time algorithmic trading platform ensuring high performance and scalability.",
-            "Designed and deployed a stock portfolio recommendation engine.",
+            "Designed and deployed a stock portfolio recommendation engine."
         ],
-        skills: ["Django", "Vue.js", "C++", "Netsuite"],
-    },
+        skills: ["Django", "Vue.js", "C++", "Netsuite"]
+    }
 ];
 
 const projectsData = [
@@ -71,36 +65,48 @@ const projectsData = [
         title: "Orderrr: An E-Commerce Website",
         description: [
             "Developed a responsive web application for seamless buying and selling of designs using React, Node.js, and Django.",
-            "Redesigned the backend, optimizing database queries and reducing response times by 50%.",
+            "Redesigned the backend, optimizing database queries and reducing response times by 50%."
         ],
         skills: ["React", "Redux", "Node.js", "MongoDB", "Django", "AWS S3"],
         links: {
             github: "https://github.com/irony-man/orderrr",
-            live: "https://orderrr-v2.onrender.com/",
-        },
+            live: "https://orderrr-v2.onrender.com/"
+        }
     },
     {
-        title: "Interactive 3D Portfolio",
+        title: "Blinkit Scraper",
+        description: [
+            "A tool to scrap sub-categories based on category id and location from blinkit.com.",
+            "Features include making API calls to blinkit endpoints and extracting data to a CSV file.",
+            "Uses ChromeDriver to automate the Google Chrome browser for scraping."
+        ],
+        skills: ["Python", "ChromeDriver", "Selenium", "Node.js"],
+        links: {
+            github: "https://github.com/irony-man/blinkit-scraper"
+        }
+    },
+    {
+        title: "Portfolio",
         description: [
             "A personal portfolio website built with Next.js and Three.js, featuring a dynamic 3D background and a clean, responsive UI.",
-            "Designed to be fully component-based for maintainability and scalability.",
+            "Designed to be fully component-based for maintainability and scalability."
         ],
         skills: ["React", "Next.js", "Three.js", "Vercel"],
         links: {
-            github: "https://github.com/irony-man/portfolio",
-        },
+            github: "https://github.com/irony-man/portfolio"
+        }
     },
     {
-        "title": "First Step Play School Website",
-        "description": [
+        title: "First Step Play School Website",
+        description: [
             "A fully responsive website for a play school, built with Next.js and Tailwind CSS.",
             "Features include program listings, a gallery, an about page, and contact and application forms with email functionality."
         ],
-        "skills": ["React", "Next.js", "Tailwind CSS", "Nodemailer", "Vercel"],
+        skills: ["React", "Next.js", "Tailwind CSS", "Nodemailer", "Vercel"],
         links: {
             github: "https://github.com/irony-man/first-step",
-            live: "https://first-step-play-school.vercel.app/",
-        },
+            live: "https://first-step-play-school.vercel.app/"
+        }
     }
 ];
 
@@ -114,7 +120,7 @@ const skillsData = {
         "Redux",
         "jQuery",
         "Bootstrap",
-        "Tailwind CSS",
+        "Tailwind CSS"
     ],
     "Back-end": ["Django", "Fast API", "NodeJs", "ExpressJs", "Gin"],
     Databases: ["PostgreSQL", "MongoDB"],
@@ -124,8 +130,8 @@ const skillsData = {
         "Docker",
         "Docker Compose",
         "Google Cloud Vision",
-        "Linux",
-    ],
+        "Linux"
+    ]
 };
 
 const activityData = [
@@ -133,14 +139,14 @@ const activityData = [
         title: "Github",
         image: "https://ghchart.rshah.org/irony-man",
         profileLink: "https://github.com/irony-man",
-        icon: <GitHubIcon />,
+        icon: <GitHubIcon />
     },
     {
         title: "Leetcode",
         image: "https://leetcard.jacoblin.cool/shivamrai0401?theme=catppuccinMocha&font=Roboto&ext=heatmap",
         profileLink: "https://leetcode.com/u/shivamrai0401",
-        icon: <LeetCodeIcon />,
-    },
+        icon: <LeetCodeIcon />
+    }
 ];
 
 // --- Main App Component ---
@@ -155,7 +161,7 @@ export default function App() {
                 });
             },
             {
-                threshold: 0.1,
+                threshold: 0.1
             }
         );
 

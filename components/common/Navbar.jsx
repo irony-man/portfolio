@@ -4,7 +4,7 @@ import CloseIcon from "@/icons/CloseIcon";
 import Footer from "./Footer";
 
 const Navbar = () => {
-    const [isOpen, setIsOpen] = useState(true);
+    const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
         document.body.style.overflow = isOpen ? "hidden" : "auto";
@@ -60,7 +60,7 @@ const Navbar = () => {
                     <a href="#contact" onClick={() => setIsOpen(false)}>
                         <span>//</span> Contact
                     </a>
-                    <div style={{marginTop: '16rem'}}>
+                    <div style={{ marginTop: "16rem" }}>
                         <Footer />
                     </div>
                 </div>

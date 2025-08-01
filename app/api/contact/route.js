@@ -1,5 +1,5 @@
-import { NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
+import { NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 
 export async function POST(request) {
     try {
@@ -7,13 +7,13 @@ export async function POST(request) {
 
         if (!name || !email || !message) {
             return NextResponse.json(
-                { error: 'Please fill out all fields.' },
+                { error: "Please fill out all fields." },
                 { status: 400 }
             );
         }
 
         const transporter = nodemailer.createTransport({
-            service: 'gmail',
+            service: "gmail",
             auth: {
                 user: process.env.EMAIL_USER,
                 pass: process.env.EMAIL_PASS
@@ -30,20 +30,20 @@ export async function POST(request) {
 				<p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
 				<hr>
 				<h3>Message:</h3>
-				<p>${message.replace(/\n/g, '<br>')}</p>
+				<p>${message.replace(/\n/g, "<br>")}</p>
 			`
         };
 
         await transporter.sendMail(mailOptions);
 
         return NextResponse.json(
-            { message: 'Email sent successfully!' },
+            { message: "Email sent successfully!" },
             { status: 200 }
         );
     } catch (error) {
-        console.error('API Route Error:', error);
+        console.error("API Route Error:", error);
         return NextResponse.json(
-            { error: 'There was an error sending the email.' },
+            { error: "There was an error sending the email." },
             { status: 500 }
         );
     }

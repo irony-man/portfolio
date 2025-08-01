@@ -12,6 +12,6 @@ const BackgroundCanvas = () => {
             </Canvas>
         </div>
     );
-}
+};
 
 export default BackgroundCanvas;

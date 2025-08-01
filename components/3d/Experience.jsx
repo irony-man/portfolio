@@ -11,8 +11,8 @@ const Experience = () => {
             material: new THREE.MeshStandardMaterial({
                 color: 0xa0aec0,
                 metalness: 0.8,
-                roughness: 0.5,
-            }),
+                roughness: 0.5
+            })
         }),
         []
     );
@@ -27,14 +27,14 @@ const Experience = () => {
                     position: [
                         (Math.random() - 0.5) * 100,
                         (Math.random() - 0.5) * 100,
-                        (Math.random() - 0.5) * 100,
+                        (Math.random() - 0.5) * 100
                     ],
                     rotation: [
                         Math.random() * Math.PI,
                         Math.random() * Math.PI,
-                        Math.random() * Math.PI,
+                        Math.random() * Math.PI
                     ],
-                    scale: [scale, scale, scale],
+                    scale: [scale, scale, scale]
                 };
             }),
         [boxGeometry, sphereGeometry]
@@ -100,6 +100,6 @@ const Experience = () => {
             ))}
         </>
     );
-}
+};
 
 export default Experience;
