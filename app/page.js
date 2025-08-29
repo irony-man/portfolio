@@ -19,6 +19,7 @@ import ActivityIcon from "@/icons/ActivityIcon";
 import GitHubIcon from "@/icons/GithubIcon";
 import LeetCodeIcon from "@/icons/LeetcodeIcon";
 import Footer from "@/components/common/Footer";
+import Head from 'next/head';
 
 // --- Data ---
 const workData = [
@@ -172,7 +173,13 @@ export default function App() {
     }, []);
 
     return (
-        <>
+        <><Head>
+            <meta property="og:title" content="Your Website Title" />
+            <meta property="og:description" content="A brief description of your website." />
+            <meta property="og:url" content="https://yourwebsite.com" />
+            <meta property="og:image" content="https://docs.nestjs.com/assets/logo-small-gradient.svg" />
+            <meta property="og:type" content="website" />
+          </Head>
             <div className="portfolio-wrapper">
                 <BackgroundCanvas />
                 <Navbar />
