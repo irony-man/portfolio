@@ -13,9 +13,30 @@ const roboto = Roboto({
 });
 
 export const metadata = {
-    title: "Shivam Rai | Software Engineer",
-    description:
-        "I'm a Software Developer, passionate about building high-performance, scalable applications. With a foundation in Computer Science and hands-on experience in both front-end and back-end development, I enjoy tackling complex problems and turning ideas into reliable software solutions. My experience spans from developing real-time trading platforms to creating efficient inventory traceability systems. I'm always eager to learn new technologies and contribute to innovative projects."
+    title: "CricRadio - Share Your Favorite Cricket",
+    description: "Dive into the best cricket highlights, curated for you.",
+    openGraph: {
+        title: "CricRadio - Share Your Favorite Cricket",
+        description: "Dive into the best cricket highlights, curated for you.",
+        url: "https://cricradio.com",
+        type: "website",
+        images: [
+            {
+                url: "https://cricradio-prod.blr1.cdn.digitaloceanspaces.com/sqaure%20logo.png",
+                width: 512,
+                height: 512,
+                alt: "CricRadio Logo"
+            }
+        ]
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "CricRadio - Share Your Favorite Cricket",
+        description: "Dive into the best cricket highlights, curated for you.",
+        images: [
+            "https://cricradio-prod.blr1.cdn.digitaloceanspaces.com/sqaure%20logo.png"
+        ]
+    }
 };
 
 export default function RootLayout({ children }) {
